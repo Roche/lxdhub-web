@@ -18,6 +18,10 @@ export interface AppSettings {
      * be run at
      */
     logLevel: string;
+    /**
+     * The version of the NPM `@lxdhub/web` package
+     */
+    package_version?: string;
 }
 
 export const APP_SETTINGS = 'AppSettings';

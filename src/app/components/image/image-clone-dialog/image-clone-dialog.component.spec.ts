@@ -13,7 +13,7 @@ import {
 } from '@angular/material';
 import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { from } from 'rxjs';
+import { from, Subscription } from 'rxjs';
 
 import { ImageCloneHintComponent } from '../image-clone-hint/image-clone-hint.component';
 import { ImageService } from '../image.service';
@@ -113,7 +113,7 @@ describe('ImageCloneDialogComponent', () => {
 
   it('should correctly call imageservice onSubmit', () => {
     spyOn(imageService, 'cloneImage').and.callFake(() => from([{ results: { uuid: '1' } }]));
-    spyOn(component, 'waitForCloneOperation').and.callFake(() => { });
+    spyOn(component, 'waitForCloneOperation').and.callThrough();
     component.selectedDestination = { id: 1 };
     component.selectedSource = { id: 2 };
     component.image = { id: 1 };

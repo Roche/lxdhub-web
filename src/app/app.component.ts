@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     <!-- Routed views go here -->
     <router-outlet></router-outlet>
   </main>
+  <app-footer></app-footer>
 </div>
   `,
   styleUrls: ['./app.component.css']
