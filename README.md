@@ -18,6 +18,8 @@
 
 # NodeJS
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Roche/lxdhub-web.svg)](https://greenkeeper.io/)
+
 ## Installation
 
 To install the depencies of lxdhub-web, run the following command
