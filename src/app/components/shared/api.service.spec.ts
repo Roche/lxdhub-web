@@ -6,8 +6,7 @@ import {
   HttpTestingController
 } from '@angular/common/http/testing';
 import { SettingsMockProvider } from '../../../settings.mock';
-import { AppSettings } from '../../../../lib/src/settings';
-import { APP_SETTINGS } from '../../../settings';
+import { APP_SETTINGS, AppSettings } from '../../../settings';
 import { APIDto } from '@lxdhub/interfaces';
 
 describe('ApiService', () => {

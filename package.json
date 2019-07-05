@@ -12,8 +12,8 @@
     "build:server": "tsc -p server",
     "build:browser": "ng build --preserve-symlinks",
     "dev:browser": "ng build --watch",
-    "test": "ng test --browsers ChromeHeadless --watch=false",
-    "test:dev": "ng test --browsers Chrome",
+    "test:ci": "ng test --browsers ChromeHeadlessCI --progress=false --code-coverage=true --watch=false",
+    "test": "ng test --browsers Chrome",
     "test:coverage": "ng test --cc",
     "lint": "ng lint"
   },
