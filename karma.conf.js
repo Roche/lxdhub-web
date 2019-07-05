@@ -3,7 +3,7 @@
 const process = require('process');
 process.env.CHROME_BIN = require('puppeteer').executablePath();
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
@@ -14,11 +14,27 @@ module.exports = function (config) {
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
+    browsers: ['ChromeHeadless', 'Chrome'],
+    customLaunchers: {
+      ChromeHeadlessCI: {
+        base: 'Chrome',
+        flags: [
+          '--headless',
+          '--no-sandbox',
+          // required to run without privileges in Docker
+          '--disable-web-security',
+          '--disable-gpu',
+          '--remote-debugging-port=9222'
+        ]
+      }
+    },
+
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, 'coverage'), reports: ['html', 'lcovonly'],
+      dir: require('path').join(__dirname, 'coverage'),
+      reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
 

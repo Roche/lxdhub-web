@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { ImageModule } from './components/image/image.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LxdLogoComponent } from './components/shared/lxd-logo/lxd-logo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LxdLogoComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

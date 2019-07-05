@@ -5,13 +5,29 @@ machine:
     - docker
 
 jobs:
-  test:
+  build:
     machine: true
     working_directory: ~/lxdhub-web
     steps:
       - checkout
-      - run: docker build -t brunnel6/lxdhub-web .
-      # - run: docker run -it brunnel6/lxdhub-web test
+      - run: docker build -t brunnerl6/lxdhub-web .
+  test:
+    docker:
+      - image: circleci/node:10-browsers
+        environment:
+          CHROME_BIN: "/usr/bin/google-chrome"
+    steps:
+      - checkout
+      - restore_cache: # special step to restore the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Setup Dependencies
+          command: yarn install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run: yarn run test:ci
 
   deploy_docker:
     machine: true
@@ -24,6 +40,7 @@ workflows:
   version: 2
   build-test-and-deploy:
     jobs:
+      - build
       - test
       - deploy_docker:
           filters:

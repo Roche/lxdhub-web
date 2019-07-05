@@ -19,4 +19,8 @@ export interface LXDHubWebSettings extends AppSettings {
      * The google analytics key e.g. UA-XXXXXXXXX-X
      */
     googleAnalytics?: string;
+    /**
+     * The version of the NPM `@lxdhub/web` package
+     */
+    package_version?: string;
 }
