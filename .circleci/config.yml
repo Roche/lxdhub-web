@@ -4,6 +4,29 @@ machine:
   services:
     - docker
 
+base_image: &base_image
+  image: circleci/node:10-browsers
+  environment:
+          CHROME_BIN: "/usr/bin/google-chrome"
+
+job_common: &job_common
+  docker:
+    - <<: *base_image
+
+save: &save
+  save_cache:
+    key: dependency-cache-{{ checksum "package.json" }}
+    paths:
+      - .
+      # save the git commit and ssh config
+      - ".git"
+      - "~/.ssh"
+      - "node_modules"
+
+restore: &restore
+  restore_cache:
+     key: dependency-cache-{{ checksum "package.json" }}
+
 jobs:
   build:
     machine: true
@@ -11,23 +34,34 @@ jobs:
     steps:
       - checkout
       - run: docker build -t brunnerl6/lxdhub-web .
-  test:
-    docker:
-      - image: circleci/node:10-browsers
-        environment:
-          CHROME_BIN: "/usr/bin/google-chrome"
+
+  lockfile_update:
+    <<: *job_common
     steps:
       - checkout
-      - restore_cache: # special step to restore the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+      - run: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run: 'greenkeeper-lockfile-update'
+      - run: 'echo lockfile_update installed greenkeeper-lockfile and ran greenkeeper-lockfile-update'
+      - <<: *save
+
+  test:
+    <<: *job_common
+    steps:
+      - checkout
+      - <<: *restore
       - run:
           name: Setup Dependencies
           command: yarn install
-      - save_cache: # special step to save the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
-          paths:
-            - ./node_modules
+      - <<: *save
       - run: yarn run test:ci
+
+  lockfile_upload:
+    <<: *job_common
+    steps:
+      - <<: *restore
+      - run: 'sudo yarn global add greenkeeper-lockfile@2'
+      - run: 'greenkeeper-lockfile-upload'
+      - run: 'echo lockfile_upload ran greenkeeper-lockfile-upload'
 
   deploy_docker:
     machine: true
@@ -41,7 +75,13 @@ workflows:
   build-test-and-deploy:
     jobs:
       - build
-      - test
+      - lockfile_update
+      - test:
+          requires:
+            - lockfile_update
+      - lockfile_upload:
+          requires:
+            - test
       - deploy_docker:
           filters:
             branches:
@@ -49,6 +89,6 @@ workflows:
             tags:
               only: /^v.*/
           requires:
-            - test
+            - lockfile_upload
 
 
