@@ -30,7 +30,6 @@ restore: &restore
 jobs:
   build:
     machine: true
-    working_directory: ~/lxdhub-web
     steps:
       - checkout
       - run: docker build -t brunnerl6/lxdhub-web .
@@ -58,6 +57,7 @@ jobs:
   lockfile_upload:
     <<: *job_common
     steps:
+      - checkout
       - <<: *restore
       - run: 'sudo yarn global add greenkeeper-lockfile@2'
       - run: 'greenkeeper-lockfile-upload'
@@ -65,7 +65,6 @@ jobs:
 
   deploy_docker:
     machine: true
-    working_directory: /tmp/lxdhub
     steps:
       - checkout
       - run: ./bin/deploy-docker.sh
