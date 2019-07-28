@@ -7,7 +7,6 @@ import { RemoteService } from './remote.service';
 import { MatSnackBarModule } from '@angular/material';
 import { RemoteHintComponent } from './remote-hint/remote-hint.component';
 
-
 @NgModule({
   imports: [
     CommonModule,

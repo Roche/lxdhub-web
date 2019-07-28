@@ -12,10 +12,6 @@ import { APP_SETTINGS, AppSettings } from '../../../settings';
  */
 @Injectable()
 export class ImageService {
-  /**
-   * Initializes the Image Service
-   * @param http The HTTP Client
-   */
   constructor(
     private http: HttpClient,
     private logger: NGXLogger,

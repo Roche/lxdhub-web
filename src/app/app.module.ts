@@ -11,6 +11,7 @@ import { ImageModule } from './components/image/image.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LxdLogoComponent } from './components/shared/lxd-logo/lxd-logo.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SyncRunModule } from './components/sync-run/sync-run.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ImageModule,
     AppRoutingModule,
     SocketIoModule,
+    SyncRunModule,
     LoggerModule.forRoot({
       level: NgxLoggerLevel.DEBUG,
       serverLogLevel: NgxLoggerLevel.DEBUG
@@ -33,5 +35,4 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
