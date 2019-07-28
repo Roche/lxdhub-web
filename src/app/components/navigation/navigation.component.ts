@@ -18,7 +18,8 @@ import { Component, OnInit } from '@angular/core';
     <!-- Spacer -->
     <div class="col-xs"></div>
     <div class="nav-items row middle-xs end-xs light-color">
-      <a routerLink="/images" class="nav-item">Images</a>
+      <a routerLink="" class="nav-item">Images</a>
+      <a routerLink="/sync" class="nav-item">Sync</a>
       <a href="https://github.com/Roche/lxdhub" class="nav-item">Github</a>
     </div>
   </div>

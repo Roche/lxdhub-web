@@ -1,0 +1,65 @@
+
+.time-column {
+  width: 200px;
+  text-align: center;
+}
+
+.sync-run-list-item {
+  min-height: 80px;
+}
+
+.sync-run-list-item td {
+  vertical-align: top; 
+}
+
+.sync-run-list {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 100%;
+  overflow-y: auto;
+}
+
+.sync-run-list th {
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.sync-run-list td, .sync-run-list th {
+  padding: 10px;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.sync-run-list tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sync-state {
+  text-align: center;
+}
+
+.sync-state-succeeded {
+  color: green;
+}
+
+.sync-state-running {
+  color: blue;
+}
+
+.sync-state-running .mat-icon {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+.sync-state-not_started {
+  color: grey;
+}
+
+.sync-state-failed {
+  color: red;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg) } }
