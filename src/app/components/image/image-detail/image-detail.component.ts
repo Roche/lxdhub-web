@@ -107,7 +107,7 @@ import { ImageService } from '../image.service';
       <span class="detail-title">Serial</span> {{ image.serial }}
     </div>
     <div *ngIf="image.size">
-      <span class="detail-title">Imagesize</span> {{ image.size.humanReadable }}
+      <span class="detail-title">Imagesize</span> {{ image.size }}
     </div>
     <div>
       <span class="detail-title">Public</span> {{ image.public }}
