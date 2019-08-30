@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { Interfaces } from '@lxdhub/common';
 
 import { RemoteService } from './remote.service';
-import { NGXLoggerMock, NGXLogger } from 'ngx-logger';
+import { NGXLogger } from 'ngx-logger';
 import { SettingsMockProvider, SettingsMock } from '../../../settings.mock';
 
 describe('RemoteService', () => {
@@ -16,7 +16,7 @@ describe('RemoteService', () => {
         RemoteService,
         {
           provide: NGXLogger,
-          useClass: NGXLoggerMock
+          useValue: { debug: () => { } }
         },
         SettingsMockProvider
       ]

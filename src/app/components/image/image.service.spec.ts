@@ -1,7 +1,7 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { Interfaces as API } from '@lxdhub/common';
-import { LoggerModule, NGXLogger, NGXLoggerMock } from 'ngx-logger';
+import { LoggerModule, NGXLogger } from 'ngx-logger';
 
 import { SettingsMock, SettingsMockProvider } from '../../../settings.mock';
 import { ImageService } from './image.service';
@@ -19,7 +19,7 @@ describe('ImageService', () => {
         ImageService,
         {
           provide: NGXLogger,
-          useClass: NGXLoggerMock
+          useValue: { debug: () => {} }
         },
         SettingsMockProvider
       ]
