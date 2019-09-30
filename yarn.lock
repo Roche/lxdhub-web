@@ -138,10 +138,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.2.1.tgz#3dc2648fe8255098940c9f9a16a271f422571d51"
-  integrity sha512-Y6xTxESrQlWw1kvSVWAs9cfeN/sYThrc/S9Ll4vekNkYSzye4mHHmDxzsKeGLR1tP+7urXTVz6xo44YUWVE7mw==
+"@angular/cdk@8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.2.2.tgz#e7898a66dbf479edaed4e6c71cf37ddd83daa1fa"
+  integrity sha512-e+BtFab0Vd1q/ZVu6l850Q4vvgyVYiugSX31oMRlp86fKHPowlAO7jL3z5JcAG7TybpLIqd7oqF8XQBR/yw83w==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -220,10 +220,10 @@
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.4.tgz#84fb765bfd93e0d235699f962560137934c82c4d"
   integrity sha512-8yoplzpNgZOMMluvxiyc0hwVs6WJBkHJoM8Dy3pb0UIRfYO1IDwrEEV6bbn25oORW59q7tUO3GD1yXwuJCswPQ==
 
-"@angular/material@8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-8.2.1.tgz#d57575715c0659a713c0eb9e65292e46923ad28d"
-  integrity sha512-A3PbyVoj2Ao3h21YJSl1zCJahxnaipUKDG8wetCuqw8Ph8Qf5v+VtLfRXY2aYIp7HEBbAhuisrW9S2r+aVq7Ww==
+"@angular/material@8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-8.2.2.tgz#c2a1773d604304f614f20bdb1c6eba1cce351f3f"
+  integrity sha512-mR2ppE+Z1S5As2SUFK8wUH76Fj7YgrefhrwVGaeCLcAen//RHPw043+KL2apPAUaltdIFlGFtUuA6yJN6av0nQ==
   dependencies:
     tslib "^1.7.1"
 
@@ -1047,10 +1047,10 @@
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.8.tgz#bf53a7d193ea8b03867a38bfdb4fbb0e0bf066c9"
   integrity sha512-OJSUxLaxXsjjhob2DBzqzgrkLmukM3+JMpRp0r0E4HTdT1nwDCWhaswjYxazPij6uOdzHCJfNbDjmQ1/rnNbCg==
 
-"@types/jasmine@3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.4.0.tgz#018c56db42400c092aae47de21f710b7f04e4b06"
-  integrity sha512-6pUnBg6DuSB55xnxJ5+gW9JOkFrPsXkYAuqqEE8oyrpgDiPQ+TZ+1Zt4S+CHcRJcxyNYXeIXG4vHSzdF6y9Uvw==
+"@types/jasmine@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.4.1.tgz#214496efdd7870f133051a95d1692f9cc0730ee7"
+  integrity sha512-kA2/srq6lb/kiczw+l/yW7lKdAN9Ae5A/pp1bhu8RBzhYY/ybc1hwav3sWrPyAwSRcAS95NVB0uZdM62qT75EA==
 
 "@types/jasminewd2@2.0.6":
   version "2.0.6"
