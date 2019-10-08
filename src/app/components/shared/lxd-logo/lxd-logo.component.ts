@@ -14,11 +14,4 @@ import { Component, OnInit } from '@angular/core';
   `,
   styleUrls: ['./lxd-logo.component.css']
 })
-export class LxdLogoComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+export class LxdLogoComponent { }
