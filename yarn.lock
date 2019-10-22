@@ -2610,10 +2610,10 @@ core-js@3.2.1:
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.2.1.tgz#cd41f38534da6cc59f7db050fe67307de9868b09"
   integrity sha512-Qa5XSVefSVPRxy2XfUC13WbvqkxhkwB3ve+pgCQveNgYzbM/UxZeu1dcOX/xr4UmfUd+muuvsaxilQzCyUurMw==
 
-core-js@3.3.2:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.3.2.tgz#cd42da1d7b0bb33ef11326be3a721934277ceb42"
-  integrity sha512-S1FfZpeBchkhyoY76YAdFzKS4zz9aOK7EeFaNA2aJlyXyA+sgqz6xdxmLPGXEAf0nF44MVN1kSjrA9Kt3ATDQg==
+core-js@3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.3.3.tgz#b7048d3c6c1a52b5fe55a729c1d4ccdffe0891bb"
+  integrity sha512-0xmD4vUJRY8nfLyV9zcpC17FtSie5STXzw+HyYw2t8IIvmDnbq7RJUULECCo+NstpJtwK9kx8S+898iyqgeUow==
 
 core-js@^2.4.0:
   version "2.5.7"
@@ -5534,10 +5534,10 @@ ng-socket-io@0.2.4:
     "@types/socket.io-client" "^1.4.29"
     socket.io-client "^2.0.2"
 
-ngx-logger@4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/ngx-logger/-/ngx-logger-4.0.5.tgz#47ae9745c92ad81cb418930467e235588a2debf3"
-  integrity sha512-RUvu6TeDga+nUFGMwGiUn+GTCwpshfF4rsfS02i8euGXE9Lq9PPPzHg10sgonPCYBYj4GAx+bdPRv8BQpRyldQ==
+ngx-logger@4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/ngx-logger/-/ngx-logger-4.0.6.tgz#d8896c2b1b843c145d6a5340ee081183c82d8aad"
+  integrity sha512-+Ilh0TRugIq5XnEEy3vQW6RffnZnISoVhop0s/krDIxKz+fngXFny+i9CQ3RSXDZpLZA+OWje05AXMSJEwywlA==
   dependencies:
     tslib "^1.9.0"
     vlq "^1.0.0"
