@@ -30,7 +30,7 @@
     "@angular/platform-browser": "8.2.4",
     "@angular/platform-browser-dynamic": "8.2.4",
     "@angular/router": "8.2.4",
-    "@lxdhub/common": "1.10.1",
+    "@lxdhub/common": "1.10.2",
     "core-js": "3.3.4",
     "dotenv": "8.2.0",
     "flexboxgrid": "6.3.1",
